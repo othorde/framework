@@ -1,0 +1,5 @@
+C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app\src\Controller\HelloWorldController.php:41	The method yatzy() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.
+C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app\src\Controller\HelloWorldController.php:41	The method yatzy() has an NPath complexity of 1728. The configured NPath complexity threshold is 200.
+C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app\src\Controller\HelloWorldController.php:67	The method yatzy uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app\src\Kernel.php:14	Avoid assigning values to variables in if clauses and the like (line '22', column '27').
+C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app\src\Kernel.php:27	Avoid assigning values to variables in if clauses and the like (line '34', column '27').
