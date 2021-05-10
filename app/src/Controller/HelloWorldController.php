@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use App\Entity\Highscore;
+
 
 class HelloWorldController extends AbstractController
 {
@@ -27,10 +29,67 @@ class HelloWorldController extends AbstractController
     */
     public function hello(): Response
     {
+        session_destroy();
+
         return $this->render('base.html.twig', [
             'message' => "Hello World as controller annotation",
             'title' => "Hello",
 
+        ]);
+    }
+
+
+    
+    /**
+     * @Route("/highscore", name="highscore")
+     * @Method({"GET", "POST"})
+     */
+    public function highscore(): Response
+    {
+        $highscore = $this->getDoctrine()
+            ->getRepository(Highscore::class)
+            ->findAll();
+
+        if (!$highscore) {
+            throw $this->createNotFoundException(
+                'No book found for '
+            );
+        }
+        
+        //return new Response('Check out this great book: ');
+
+        // or render a template
+        // in the template, print things with {{ book.name }}
+        return $this->render('highscore.html.twig', ['highscore' => $highscore]);
+    }
+
+
+
+
+
+    
+    /**
+     * @Route("/createHighscore")
+     * @Method({"GET", "POST"})
+    */
+    public function createHighscore(): Response
+    {
+        var_dump($_POST);
+
+        if(isset($_POST["playername"])) {
+
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $highscore = new highscore();
+            $highscore->setName($_POST["playername"]);
+            $highscore->setScore($_POST["highscore"]);
+            $highscore->setDate(new \DateTime());
+            $entityManager->persist($highscore);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('highscore', [
+            'highscore' => $highscore
         ]);
     }
 
@@ -42,13 +101,12 @@ class HelloWorldController extends AbstractController
     {
         if (empty($_SESSION)) {
             session_start();
+            $nrOfDice = 5;
+            $game = new YatzyGame($nrOfDice);
+            $_SESSION["yatzygame"] = $game;
         }
-        $nrOfDice = 5;
-        $game = new YatzyGame($nrOfDice);
-        $_SESSION["yatzygame"] = $game;
-        if (isset($_POST["reset"]) && $_POST["reset"] === "RESET") {
-            destroySession();
-        }
+      
+
         if (!isset($_SESSION["throws"])) {
             $_SESSION["throws"] = 1;
             $_SESSION["round"] = 1;
@@ -62,12 +120,14 @@ class HelloWorldController extends AbstractController
         ?>
         <?php
 
+
+
         if (empty($_POST)) {
             $nrOfDie2ThrowNext = 5;
         } else {
             $nrOfDie2ThrowNext = 6 - count($_POST); // 6 = 5 tärningar i arrayn plus "KASTA" därav 6
         }
-        //$game = $_SESSION["yatzygame"]; //hämtar obj
+        $game = $_SESSION["yatzygame"]; //hämtar obj
         $game->roll(); // roll
         $game->setNrOfDice($nrOfDie2ThrowNext);
         $whatRound = $game->whatRound();
@@ -86,6 +146,26 @@ class HelloWorldController extends AbstractController
         <p> Du har kastat  <?= $whatThrow ?> kast denna runda. </p>
         <p> Du är på omgång nummer <?= $whatRound ?>. </p>
         <p><?= $returnMess ?> </p>
+
+        <?php
+        if ($whatRound > 6) {
+            ?>
+            <form action=createHighscore method="POST">
+            <p> Summa: <?= $checkSum ?> </p>
+
+            <input type="text" id="player" name= "playername"> <br>
+            <input type="text" name= "highscore" value= <?= $checkSum ?> readonly>
+
+            <input type="submit" name= "" value= "Save highscore">
+            </form>
+            <?php
+            $_SESSION["throws"] = 0;
+            $_SESSION["round"] = 0;
+        }
+        ?>
+
+
+
         <p class = "mark-newround"> <?= $newRoundOrNot ?> </p>
         <!-- Grafisk visning av tärningarna -->
         <p class = "dice-utf8">

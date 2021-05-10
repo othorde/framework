@@ -1,0 +1,35 @@
+
+{{ include('head.html.twig') }}
+<body>
+    {{ include('header.html.twig') }}
+
+   
+    {% block body %}{% endblock %}
+</body>
+</html>
+
+
+
+<div class="example-wrapper">
+    <h1> Highscore </h1>
+
+    Highscore:
+
+    <table>
+    <tr>
+
+        <td>Player</td>
+        <td>Score</td>
+
+    </tr>
+    {% for score in highscore %}
+    <tr>
+        <td>{{ score.name }} </td>
+        <td>{{ score.score }} </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</div>
+
