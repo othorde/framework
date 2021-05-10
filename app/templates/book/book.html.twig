@@ -1,0 +1,44 @@
+
+{{ include('head.html.twig') }}
+<body>
+    {{ include('header.html.twig') }}
+
+   
+    {% block body %}{% endblock %}
+</body>
+</html>
+
+
+
+<div class="example-wrapper">
+    <h1> Books </h1>
+
+    Collection of books:
+
+    <table>
+    <tr>
+        <td>Id</td>
+
+        <td>Title</td>
+        <td>ISBN</td>
+        <td>Author</td>
+        <td>Frontcover</td>
+
+    </tr>
+    {% for all in book %}
+    <tr>
+        <td>{{ all.id }} </td>
+
+        <td>{{ all.title }} </td>
+        <td>{{ all.isbn }}</td>
+        <td>{{ all.author }}</td>
+        <td><a href={{ all.frontcover }}>Picture</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</div>
+
+
+{{dump(book)}}
