@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace App\Dice;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseInterface;

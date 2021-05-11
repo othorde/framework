@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use App\Entity\Highscore;
-
+use App\Dice\YatzyGame;
 
 class HelloWorldController extends AbstractController
 {
@@ -29,7 +29,6 @@ class HelloWorldController extends AbstractController
     */
     public function hello(): Response
     {
-        session_destroy();
 
         return $this->render('base.html.twig', [
             'message' => "Hello World as controller annotation",
@@ -38,8 +37,6 @@ class HelloWorldController extends AbstractController
         ]);
     }
 
-
-    
     /**
      * @Route("/highscore", name="highscore")
      * @Method({"GET", "POST"})
@@ -55,7 +52,7 @@ class HelloWorldController extends AbstractController
                 'No book found for '
             );
         }
-        
+
         //return new Response('Check out this great book: ');
 
         // or render a template
@@ -63,11 +60,6 @@ class HelloWorldController extends AbstractController
         return $this->render('highscore.html.twig', ['highscore' => $highscore]);
     }
 
-
-
-
-
-    
     /**
      * @Route("/createHighscore")
      * @Method({"GET", "POST"})
@@ -76,9 +68,7 @@ class HelloWorldController extends AbstractController
     {
         var_dump($_POST);
 
-        if(isset($_POST["playername"])) {
-
-
+        if (isset($_POST["playername"])) {
             $entityManager = $this->getDoctrine()->getManager();
             $highscore = new highscore();
             $highscore->setName($_POST["playername"]);
@@ -105,7 +95,6 @@ class HelloWorldController extends AbstractController
             $game = new YatzyGame($nrOfDice);
             $_SESSION["yatzygame"] = $game;
         }
-      
 
         if (!isset($_SESSION["throws"])) {
             $_SESSION["throws"] = 1;

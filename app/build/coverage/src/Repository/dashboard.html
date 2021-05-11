@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Controller</title>
+  <title>Dashboard for C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Repository</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="../../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
@@ -18,7 +18,7 @@
        <ol class="breadcrumb">
          <li class="breadcrumb-item"><a href="../../index.html">C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app</a></li>
          <li class="breadcrumb-item"><a href="../index.html">src</a></li>
-         <li class="breadcrumb-item"><a href="index.html">Controller</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Repository</a></li>
          <li class="breadcrumb-item active">(Dashboard)</li>
 
        </ol>
@@ -59,8 +59,8 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="BookController.php.html#12">App\Controller\BookController</a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="HelloWorldController.php.html#11">App\Controller\HelloWorldController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BookRepository.php.html#15">App\Repository\BookRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="HighscoreRepository.php.html#15">App\Repository\HighscoreRepository</a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -77,8 +77,6 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="HelloWorldController.php.html#11">App\Controller\HelloWorldController</a></td><td class="text-right">380</td></tr>
-       <tr><td><a href="BookController.php.html#12">App\Controller\BookController</a></td><td class="text-right">42</td></tr>
 
        </tbody>
       </table>
@@ -116,14 +114,8 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="BookController.php.html#17"><abbr title="App\Controller\BookController::createBook">createBook</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="BookController.php.html#67"><abbr title="App\Controller\BookController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="BookController.php.html#91"><abbr title="App\Controller\BookController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="HelloWorldController.php.html#17"><abbr title="App\Controller\HelloWorldController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="HelloWorldController.php.html#29"><abbr title="App\Controller\HelloWorldController::hello">hello</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="HelloWorldController.php.html#44"><abbr title="App\Controller\HelloWorldController::highscore">highscore</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="HelloWorldController.php.html#67"><abbr title="App\Controller\HelloWorldController::createHighscore">createHighscore</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="HelloWorldController.php.html#90"><abbr title="App\Controller\HelloWorldController::yatzy">yatzy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BookRepository.php.html#17"><abbr title="App\Repository\BookRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="HighscoreRepository.php.html#17"><abbr title="App\Repository\HighscoreRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -140,12 +132,6 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="HelloWorldController.php.html#90"><abbr title="App\Controller\HelloWorldController::yatzy">yatzy</abbr></a></td><td class="text-right">182</td></tr>
-       <tr><td><a href="BookController.php.html#17"><abbr title="App\Controller\BookController::createBook">createBook</abbr></a></td><td class="text-right">6</td></tr>
-       <tr><td><a href="BookController.php.html#67"><abbr title="App\Controller\BookController::show">show</abbr></a></td><td class="text-right">6</td></tr>
-       <tr><td><a href="BookController.php.html#91"><abbr title="App\Controller\BookController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
-       <tr><td><a href="HelloWorldController.php.html#44"><abbr title="App\Controller\HelloWorldController::highscore">highscore</abbr></a></td><td class="text-right">6</td></tr>
-       <tr><td><a href="HelloWorldController.php.html#67"><abbr title="App\Controller\HelloWorldController::createHighscore">createHighscore</abbr></a></td><td class="text-right">6</td></tr>
 
        </tbody>
       </table>
@@ -192,7 +178,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([8,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .datum(getCoverageDistributionData([2,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -242,7 +228,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[0,6,"<a href=\"BookController.php.html#12\">App\\Controller\\BookController<\/a>"],[0,19,"<a href=\"HelloWorldController.php.html#11\">App\\Controller\\HelloWorldController<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[0,1,"<a href=\"BookRepository.php.html#15\">App\\Repository\\BookRepository<\/a>"],[0,1,"<a href=\"HighscoreRepository.php.html#15\">App\\Repository\\HighscoreRepository<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -266,7 +252,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[0,2,"<a href=\"BookController.php.html#17\">App\\Controller\\BookController::createBook<\/a>"],[0,2,"<a href=\"BookController.php.html#67\">App\\Controller\\BookController::show<\/a>"],[0,2,"<a href=\"BookController.php.html#91\">App\\Controller\\BookController::delete<\/a>"],[0,1,"<a href=\"HelloWorldController.php.html#17\">App\\Controller\\HelloWorldController::index<\/a>"],[0,1,"<a href=\"HelloWorldController.php.html#29\">App\\Controller\\HelloWorldController::hello<\/a>"],[0,2,"<a href=\"HelloWorldController.php.html#44\">App\\Controller\\HelloWorldController::highscore<\/a>"],[0,2,"<a href=\"HelloWorldController.php.html#67\">App\\Controller\\HelloWorldController::createHighscore<\/a>"],[0,13,"<a href=\"HelloWorldController.php.html#90\">App\\Controller\\HelloWorldController::yatzy<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[0,1,"<a href=\"BookRepository.php.html#17\">App\\Repository\\BookRepository::__construct<\/a>"],[0,1,"<a href=\"HighscoreRepository.php.html#17\">App\\Repository\\HighscoreRepository::__construct<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);

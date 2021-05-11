@@ -1,5 +1,20 @@
-C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app\src\Controller\HelloWorldController.php:41	The method yatzy() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.
-C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app\src\Controller\HelloWorldController.php:41	The method yatzy() has an NPath complexity of 1728. The configured NPath complexity threshold is 200.
-C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app\src\Controller\HelloWorldController.php:67	The method yatzy uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app\src\Kernel.php:14	Avoid assigning values to variables in if clauses and the like (line '22', column '27').
-C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app\src\Kernel.php:27	Avoid assigning values to variables in if clauses and the like (line '34', column '27').
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\migrations\Version20210510083800.php:20	Avoid using short method names like Version20210510083800::up(). The configured minimum method name length is 3.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\migrations\Version20210510083800.php:20	Avoid using short method names like Version20210510083800::up(). The configured minimum method name length is 3.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\migrations\Version20210510083800.php:20	Avoid unused parameters such as '$schema'.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\migrations\Version20210510083800.php:26	Avoid unused parameters such as '$schema'.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\migrations\Version20210510125920.php:20	Avoid using short method names like Version20210510125920::up(). The configured minimum method name length is 3.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\migrations\Version20210510125920.php:20	Avoid using short method names like Version20210510125920::up(). The configured minimum method name length is 3.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\migrations\Version20210510125920.php:20	Avoid unused parameters such as '$schema'.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\migrations\Version20210510125920.php:27	Avoid unused parameters such as '$schema'.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Controller\BookController.php:96	Avoid using App\Controller\count() function in for loops.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Controller\HelloWorldController.php:76	Missing class import via use statement (line '76', column '37').
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Controller\HelloWorldController.php:90	The method yatzy() has a Cyclomatic Complexity of 13. The configured cyclomatic complexity threshold is 10.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Controller\HelloWorldController.php:90	The method yatzy() has an NPath complexity of 1152. The configured NPath complexity threshold is 200.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Controller\HelloWorldController.php:90	The method yatzy() has 116 lines of code. Current threshold is set to 100. Avoid really long methods.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Controller\HelloWorldController.php:116	The method yatzy uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Entity\Book.php:18	Avoid variables with short names like $id. Configured minimum length is 3.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Entity\Book.php:62	The parameter $ISBN is not named in camelCase.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Entity\Book.php:62	The variable $ISBN is not named in camelCase.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Entity\Highscore.php:18	Avoid variables with short names like $id. Configured minimum length is 3.
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Kernel.php:14	Avoid assigning values to variables in if clauses and the like (line '22', column '27').
+C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src\Kernel.php:27	Avoid assigning values to variables in if clauses and the like (line '34', column '27').

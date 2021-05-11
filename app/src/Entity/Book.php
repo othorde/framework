@@ -18,22 +18,22 @@ class Book
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $ISBN;
+    private $isbn;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $author;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $frontcover;
 
@@ -47,21 +47,21 @@ class Book
         return $this->title;
     }
 
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
 
         return $this;
     }
 
-    public function getISBN(): ?string
+    public function getIsbn(): ?string
     {
-        return $this->ISBN;
+        return $this->isbn;
     }
 
-    public function setISBN(string $ISBN): self
+    public function setIsbn(?string $isbn): self
     {
-        $this->ISBN = $ISBN;
+        $this->isbn = $isbn;
 
         return $this;
     }
@@ -71,19 +71,19 @@ class Book
         return $this->author;
     }
 
-    public function setAuthor(string $author): self
+    public function setAuthor(?string $author): self
     {
         $this->author = $author;
 
         return $this;
     }
 
-    public function getFrontcover()
+    public function getFrontcover(): ?string
     {
         return $this->frontcover;
     }
 
-    public function setFrontcover($frontcover): self
+    public function setFrontcover(?string $frontcover): self
     {
         $this->frontcover = $frontcover;
 

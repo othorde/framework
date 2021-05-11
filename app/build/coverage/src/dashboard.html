@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app\src</title>
+  <title>Dashboard for C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app\src</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
@@ -16,7 +16,7 @@
      <div class="col-md-12">
       <nav aria-label="breadcrumb">
        <ol class="breadcrumb">
-         <li class="breadcrumb-item"><a href="../index.html">C:\Users\Othor\dbwebb-kurser\mvc\me\framework\app</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">C:\Users\Othor\dbwebb-kurser\mvc\me\orm\app</a></li>
          <li class="breadcrumb-item"><a href="index.html">src</a></li>
          <li class="breadcrumb-item active">(Dashboard)</li>
 
@@ -58,12 +58,17 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="Controller/HelloWorldController.php.html#10">App\Controller\HelloWorldController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BookController.php.html#12">App\Controller\BookController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HelloWorldController.php.html#11">App\Controller\HelloWorldController</a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Dice/Dice.php.html#22">App\Controller\Dice</a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Dice/DiceHand.php.html#22">App\Controller\DiceHand</a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Dice/GraphicalDice.php.html#26">App\Controller\GraphicalDice</a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Dice/YatzyGame.php.html#15">App\Controller\YatzyGame</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Book.php.html#11">App\Entity\Book</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Highscore.php.html#11">App\Entity\Highscore</a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Kernel.php.html#10">App\Kernel</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BookRepository.php.html#15">App\Repository\BookRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/HighscoreRepository.php.html#15">App\Repository\HighscoreRepository</a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -81,8 +86,9 @@
        </thead>
        <tbody>
        <tr><td><a href="Dice/YatzyGame.php.html#15">App\Controller\YatzyGame</a></td><td class="text-right">812</td></tr>
-       <tr><td><a href="Controller/HelloWorldController.php.html#10">App\Controller\HelloWorldController</a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="Controller/HelloWorldController.php.html#11">App\Controller\HelloWorldController</a></td><td class="text-right">380</td></tr>
        <tr><td><a href="Dice/DiceHand.php.html#22">App\Controller\DiceHand</a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="Controller/BookController.php.html#12">App\Controller\BookController</a></td><td class="text-right">42</td></tr>
        <tr><td><a href="Kernel.php.html#10">App\Kernel</a></td><td class="text-right">42</td></tr>
 
        </tbody>
@@ -121,33 +127,56 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="Controller/HelloWorldController.php.html#16"><abbr title="App\Controller\HelloWorldController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#108"><abbr title="App\Controller\DiceHand::getNrOfDice">getNrOfDice</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Kernel.php.html#14"><abbr title="App\Kernel::configureContainer">configureContainer</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/YatzyGame.php.html#103"><abbr title="App\Controller\YatzyGame::returnMess">returnMess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BookController.php.html#17"><abbr title="App\Controller\BookController::createBook">createBook</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Book.php.html#81"><abbr title="App\Entity\Book::getFrontcover">getFrontcover</abbr></a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Dice/YatzyGame.php.html#97"><abbr title="App\Controller\YatzyGame::getSum">getSum</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/YatzyGame.php.html#76"><abbr title="App\Controller\YatzyGame::checkScore">checkScore</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/YatzyGame.php.html#103"><abbr title="App\Controller\YatzyGame::returnMess">returnMess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Book.php.html#40"><abbr title="App\Entity\Book::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Book.php.html#45"><abbr title="App\Entity\Book::getTitle">getTitle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Book.php.html#50"><abbr title="App\Entity\Book::setTitle">setTitle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Book.php.html#57"><abbr title="App\Entity\Book::getISBN">getISBN</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Book.php.html#62"><abbr title="App\Entity\Book::setISBN">setISBN</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Book.php.html#69"><abbr title="App\Entity\Book::getAuthor">getAuthor</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Book.php.html#74"><abbr title="App\Entity\Book::setAuthor">setAuthor</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Book.php.html#86"><abbr title="App\Entity\Book::setFrontcover">setFrontcover</abbr></a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Dice/YatzyGame.php.html#59"><abbr title="App\Controller\YatzyGame::savedDices">savedDices</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/YatzyGame.php.html#47"><abbr title="App\Controller\YatzyGame::newRoundOrNot">newRoundOrNot</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/YatzyGame.php.html#37"><abbr title="App\Controller\YatzyGame::whatThrow">whatThrow</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/YatzyGame.php.html#27"><abbr title="App\Controller\YatzyGame::whatRound">whatRound</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/YatzyGame.php.html#22"><abbr title="App\Controller\YatzyGame::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/GraphicalDice.php.html#43"><abbr title="App\Controller\GraphicalDice::graphic">graphic</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/GraphicalDice.php.html#33"><abbr title="App\Controller\GraphicalDice::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#103"><abbr title="App\Controller\DiceHand::setNrOfDice">setNrOfDice</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Controller/HelloWorldController.php.html#28"><abbr title="App\Controller\HelloWorldController::hello">hello</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#84"><abbr title="App\Controller\DiceHand::checkNumber">checkNumber</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#78"><abbr title="App\Controller\DiceHand::getSum">getSum</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#68"><abbr title="App\Controller\DiceHand::getGraphicalDices">getGraphicalDices</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#57"><abbr title="App\Controller\DiceHand::getLastRollWithoutSum">getLastRollWithoutSum</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#47"><abbr title="App\Controller\DiceHand::getLastRoll">getLastRoll</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#37"><abbr title="App\Controller\DiceHand::roll">roll</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#28"><abbr title="App\Controller\DiceHand::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/Dice.php.html#39"><abbr title="App\Controller\Dice::getLastRoll">getLastRoll</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/Dice.php.html#32"><abbr title="App\Controller\Dice::roll">roll</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Dice/Dice.php.html#27"><abbr title="App\Controller\Dice::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
-       <tr><td><a href="Controller/HelloWorldController.php.html#41"><abbr title="App\Controller\HelloWorldController::yatzy">yatzy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Highscore.php.html#35"><abbr title="App\Entity\Highscore::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Highscore.php.html#40"><abbr title="App\Entity\Highscore::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Highscore.php.html#45"><abbr title="App\Entity\Highscore::setName">setName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Highscore.php.html#52"><abbr title="App\Entity\Highscore::getScore">getScore</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Highscore.php.html#57"><abbr title="App\Entity\Highscore::setScore">setScore</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Highscore.php.html#64"><abbr title="App\Entity\Highscore::getDate">getDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Highscore.php.html#69"><abbr title="App\Entity\Highscore::setDate">setDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Kernel.php.html#14"><abbr title="App\Kernel::configureContainer">configureContainer</abbr></a></td><td class="text-right">0%</td></tr>
        <tr><td><a href="Kernel.php.html#27"><abbr title="App\Kernel::configureRoutes">configureRoutes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/BookRepository.php.html#17"><abbr title="App\Repository\BookRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/YatzyGame.php.html#76"><abbr title="App\Controller\YatzyGame::checkScore">checkScore</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/YatzyGame.php.html#47"><abbr title="App\Controller\YatzyGame::newRoundOrNot">newRoundOrNot</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BookController.php.html#67"><abbr title="App\Controller\BookController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#37"><abbr title="App\Controller\DiceHand::roll">roll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BookController.php.html#91"><abbr title="App\Controller\BookController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HelloWorldController.php.html#17"><abbr title="App\Controller\HelloWorldController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HelloWorldController.php.html#29"><abbr title="App\Controller\HelloWorldController::hello">hello</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HelloWorldController.php.html#44"><abbr title="App\Controller\HelloWorldController::highscore">highscore</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HelloWorldController.php.html#67"><abbr title="App\Controller\HelloWorldController::createHighscore">createHighscore</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/HelloWorldController.php.html#90"><abbr title="App\Controller\HelloWorldController::yatzy">yatzy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/Dice.php.html#27"><abbr title="App\Controller\Dice::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/Dice.php.html#32"><abbr title="App\Controller\Dice::roll">roll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/Dice.php.html#39"><abbr title="App\Controller\Dice::getLastRoll">getLastRoll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#28"><abbr title="App\Controller\DiceHand::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#47"><abbr title="App\Controller\DiceHand::getLastRoll">getLastRoll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/YatzyGame.php.html#37"><abbr title="App\Controller\YatzyGame::whatThrow">whatThrow</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#57"><abbr title="App\Controller\DiceHand::getLastRollWithoutSum">getLastRollWithoutSum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#68"><abbr title="App\Controller\DiceHand::getGraphicalDices">getGraphicalDices</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#78"><abbr title="App\Controller\DiceHand::getSum">getSum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#84"><abbr title="App\Controller\DiceHand::checkNumber">checkNumber</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#103"><abbr title="App\Controller\DiceHand::setNrOfDice">setNrOfDice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#108"><abbr title="App\Controller\DiceHand::getNrOfDice">getNrOfDice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/GraphicalDice.php.html#33"><abbr title="App\Controller\GraphicalDice::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/GraphicalDice.php.html#43"><abbr title="App\Controller\GraphicalDice::graphic">graphic</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/YatzyGame.php.html#22"><abbr title="App\Controller\YatzyGame::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/YatzyGame.php.html#27"><abbr title="App\Controller\YatzyGame::whatRound">whatRound</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/HighscoreRepository.php.html#17"><abbr title="App\Repository\HighscoreRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
 
        </tbody>
       </table>
@@ -164,21 +193,26 @@
         </tr>
        </thead>
        <tbody>
-       <tr><td><a href="Controller/HelloWorldController.php.html#41"><abbr title="App\Controller\HelloWorldController::yatzy">yatzy</abbr></a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="Controller/HelloWorldController.php.html#90"><abbr title="App\Controller\HelloWorldController::yatzy">yatzy</abbr></a></td><td class="text-right">182</td></tr>
        <tr><td><a href="Dice/YatzyGame.php.html#103"><abbr title="App\Controller\YatzyGame::returnMess">returnMess</abbr></a></td><td class="text-right">90</td></tr>
        <tr><td><a href="Dice/YatzyGame.php.html#76"><abbr title="App\Controller\YatzyGame::checkScore">checkScore</abbr></a></td><td class="text-right">42</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#84"><abbr title="App\Controller\DiceHand::checkNumber">checkNumber</abbr></a></td><td class="text-right">12</td></tr>
-       <tr><td><a href="Dice/YatzyGame.php.html#27"><abbr title="App\Controller\YatzyGame::whatRound">whatRound</abbr></a></td><td class="text-right">12</td></tr>
-       <tr><td><a href="Dice/YatzyGame.php.html#37"><abbr title="App\Controller\YatzyGame::whatThrow">whatThrow</abbr></a></td><td class="text-right">12</td></tr>
-       <tr><td><a href="Dice/YatzyGame.php.html#59"><abbr title="App\Controller\YatzyGame::savedDices">savedDices</abbr></a></td><td class="text-right">12</td></tr>
-       <tr><td><a href="Kernel.php.html#14"><abbr title="App\Kernel::configureContainer">configureContainer</abbr></a></td><td class="text-right">12</td></tr>
        <tr><td><a href="Kernel.php.html#27"><abbr title="App\Kernel::configureRoutes">configureRoutes</abbr></a></td><td class="text-right">12</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#28"><abbr title="App\Controller\DiceHand::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#37"><abbr title="App\Controller\DiceHand::roll">roll</abbr></a></td><td class="text-right">6</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#47"><abbr title="App\Controller\DiceHand::getLastRoll">getLastRoll</abbr></a></td><td class="text-right">6</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#57"><abbr title="App\Controller\DiceHand::getLastRollWithoutSum">getLastRollWithoutSum</abbr></a></td><td class="text-right">6</td></tr>
-       <tr><td><a href="Dice/DiceHand.php.html#68"><abbr title="App\Controller\DiceHand::getGraphicalDices">getGraphicalDices</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#84"><abbr title="App\Controller\DiceHand::checkNumber">checkNumber</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Kernel.php.html#14"><abbr title="App\Kernel::configureContainer">configureContainer</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Dice/YatzyGame.php.html#59"><abbr title="App\Controller\YatzyGame::savedDices">savedDices</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Dice/YatzyGame.php.html#37"><abbr title="App\Controller\YatzyGame::whatThrow">whatThrow</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Dice/YatzyGame.php.html#27"><abbr title="App\Controller\YatzyGame::whatRound">whatRound</abbr></a></td><td class="text-right">12</td></tr>
        <tr><td><a href="Dice/YatzyGame.php.html#47"><abbr title="App\Controller\YatzyGame::newRoundOrNot">newRoundOrNot</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/BookController.php.html#17"><abbr title="App\Controller\BookController::createBook">createBook</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/BookController.php.html#67"><abbr title="App\Controller\BookController::show">show</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#57"><abbr title="App\Controller\DiceHand::getLastRollWithoutSum">getLastRollWithoutSum</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#47"><abbr title="App\Controller\DiceHand::getLastRoll">getLastRoll</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#37"><abbr title="App\Controller\DiceHand::roll">roll</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#28"><abbr title="App\Controller\DiceHand::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/HelloWorldController.php.html#67"><abbr title="App\Controller\HelloWorldController::createHighscore">createHighscore</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/HelloWorldController.php.html#44"><abbr title="App\Controller\HelloWorldController::highscore">highscore</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/BookController.php.html#91"><abbr title="App\Controller\BookController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#68"><abbr title="App\Controller\DiceHand::getGraphicalDices">getGraphicalDices</abbr></a></td><td class="text-right">6</td></tr>
 
        </tbody>
       </table>
@@ -188,7 +222,7 @@
    <footer>
     <hr/>
     <p>
-     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.6</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.9</a> with <a href="https://xdebug.org/">Xdebug 2.8.1</a> and <a href="https://phpunit.de/">PHPUnit 9.5.4</a> at Thu May 6 8:53:49 CEST 2021.</small>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.6</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.9</a> with <a href="https://xdebug.org/">Xdebug 2.8.1</a> and <a href="https://phpunit.de/">PHPUnit 9.5.4</a> at Tue May 11 11:42:26 CEST 2021.</small>
     </p>
    </footer>
   </div>
@@ -207,7 +241,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([6,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
+      .datum(getCoverageDistributionData([11,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -225,7 +259,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([27,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .datum(getCoverageDistributionData([50,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -275,7 +309,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[0,16,"<a href=\"Controller\/HelloWorldController.php.html#10\">App\\Controller\\HelloWorldController<\/a>"],[0,3,"<a href=\"Dice\/Dice.php.html#22\">App\\Controller\\Dice<\/a>"],[0,16,"<a href=\"Dice\/DiceHand.php.html#22\">App\\Controller\\DiceHand<\/a>"],[0,2,"<a href=\"Dice\/GraphicalDice.php.html#26\">App\\Controller\\GraphicalDice<\/a>"],[0,28,"<a href=\"Dice\/YatzyGame.php.html#15\">App\\Controller\\YatzyGame<\/a>"],[0,6,"<a href=\"Kernel.php.html#10\">App\\Kernel<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[0,6,"<a href=\"Controller\/BookController.php.html#12\">App\\Controller\\BookController<\/a>"],[0,19,"<a href=\"Controller\/HelloWorldController.php.html#11\">App\\Controller\\HelloWorldController<\/a>"],[0,3,"<a href=\"Dice\/Dice.php.html#22\">App\\Controller\\Dice<\/a>"],[0,16,"<a href=\"Dice\/DiceHand.php.html#22\">App\\Controller\\DiceHand<\/a>"],[0,2,"<a href=\"Dice\/GraphicalDice.php.html#26\">App\\Controller\\GraphicalDice<\/a>"],[0,28,"<a href=\"Dice\/YatzyGame.php.html#15\">App\\Controller\\YatzyGame<\/a>"],[0,9,"<a href=\"Entity\/Book.php.html#11\">App\\Entity\\Book<\/a>"],[0,7,"<a href=\"Entity\/Highscore.php.html#11\">App\\Entity\\Highscore<\/a>"],[0,6,"<a href=\"Kernel.php.html#10\">App\\Kernel<\/a>"],[0,1,"<a href=\"Repository\/BookRepository.php.html#15\">App\\Repository\\BookRepository<\/a>"],[0,1,"<a href=\"Repository\/HighscoreRepository.php.html#15\">App\\Repository\\HighscoreRepository<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -299,7 +333,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[0,1,"<a href=\"Controller\/HelloWorldController.php.html#16\">App\\Controller\\HelloWorldController::index<\/a>"],[0,1,"<a href=\"Controller\/HelloWorldController.php.html#28\">App\\Controller\\HelloWorldController::hello<\/a>"],[0,14,"<a href=\"Controller\/HelloWorldController.php.html#41\">App\\Controller\\HelloWorldController::yatzy<\/a>"],[0,1,"<a href=\"Dice\/Dice.php.html#27\">App\\Controller\\Dice::__construct<\/a>"],[0,1,"<a href=\"Dice\/Dice.php.html#32\">App\\Controller\\Dice::roll<\/a>"],[0,1,"<a href=\"Dice\/Dice.php.html#39\">App\\Controller\\Dice::getLastRoll<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#28\">App\\Controller\\DiceHand::__construct<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#37\">App\\Controller\\DiceHand::roll<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#47\">App\\Controller\\DiceHand::getLastRoll<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#57\">App\\Controller\\DiceHand::getLastRollWithoutSum<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#68\">App\\Controller\\DiceHand::getGraphicalDices<\/a>"],[0,1,"<a href=\"Dice\/DiceHand.php.html#78\">App\\Controller\\DiceHand::getSum<\/a>"],[0,3,"<a href=\"Dice\/DiceHand.php.html#84\">App\\Controller\\DiceHand::checkNumber<\/a>"],[0,1,"<a href=\"Dice\/DiceHand.php.html#103\">App\\Controller\\DiceHand::setNrOfDice<\/a>"],[0,1,"<a href=\"Dice\/DiceHand.php.html#108\">App\\Controller\\DiceHand::getNrOfDice<\/a>"],[0,1,"<a href=\"Dice\/GraphicalDice.php.html#33\">App\\Controller\\GraphicalDice::__construct<\/a>"],[0,1,"<a href=\"Dice\/GraphicalDice.php.html#43\">App\\Controller\\GraphicalDice::graphic<\/a>"],[0,1,"<a href=\"Dice\/YatzyGame.php.html#22\">App\\Controller\\YatzyGame::__construct<\/a>"],[0,3,"<a href=\"Dice\/YatzyGame.php.html#27\">App\\Controller\\YatzyGame::whatRound<\/a>"],[0,3,"<a href=\"Dice\/YatzyGame.php.html#37\">App\\Controller\\YatzyGame::whatThrow<\/a>"],[0,2,"<a href=\"Dice\/YatzyGame.php.html#47\">App\\Controller\\YatzyGame::newRoundOrNot<\/a>"],[0,3,"<a href=\"Dice\/YatzyGame.php.html#59\">App\\Controller\\YatzyGame::savedDices<\/a>"],[0,6,"<a href=\"Dice\/YatzyGame.php.html#76\">App\\Controller\\YatzyGame::checkScore<\/a>"],[0,1,"<a href=\"Dice\/YatzyGame.php.html#97\">App\\Controller\\YatzyGame::getSum<\/a>"],[0,9,"<a href=\"Dice\/YatzyGame.php.html#103\">App\\Controller\\YatzyGame::returnMess<\/a>"],[0,3,"<a href=\"Kernel.php.html#14\">App\\Kernel::configureContainer<\/a>"],[0,3,"<a href=\"Kernel.php.html#27\">App\\Kernel::configureRoutes<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[0,2,"<a href=\"Controller\/BookController.php.html#17\">App\\Controller\\BookController::createBook<\/a>"],[0,2,"<a href=\"Controller\/BookController.php.html#67\">App\\Controller\\BookController::show<\/a>"],[0,2,"<a href=\"Controller\/BookController.php.html#91\">App\\Controller\\BookController::delete<\/a>"],[0,1,"<a href=\"Controller\/HelloWorldController.php.html#17\">App\\Controller\\HelloWorldController::index<\/a>"],[0,1,"<a href=\"Controller\/HelloWorldController.php.html#29\">App\\Controller\\HelloWorldController::hello<\/a>"],[0,2,"<a href=\"Controller\/HelloWorldController.php.html#44\">App\\Controller\\HelloWorldController::highscore<\/a>"],[0,2,"<a href=\"Controller\/HelloWorldController.php.html#67\">App\\Controller\\HelloWorldController::createHighscore<\/a>"],[0,13,"<a href=\"Controller\/HelloWorldController.php.html#90\">App\\Controller\\HelloWorldController::yatzy<\/a>"],[0,1,"<a href=\"Dice\/Dice.php.html#27\">App\\Controller\\Dice::__construct<\/a>"],[0,1,"<a href=\"Dice\/Dice.php.html#32\">App\\Controller\\Dice::roll<\/a>"],[0,1,"<a href=\"Dice\/Dice.php.html#39\">App\\Controller\\Dice::getLastRoll<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#28\">App\\Controller\\DiceHand::__construct<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#37\">App\\Controller\\DiceHand::roll<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#47\">App\\Controller\\DiceHand::getLastRoll<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#57\">App\\Controller\\DiceHand::getLastRollWithoutSum<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#68\">App\\Controller\\DiceHand::getGraphicalDices<\/a>"],[0,1,"<a href=\"Dice\/DiceHand.php.html#78\">App\\Controller\\DiceHand::getSum<\/a>"],[0,3,"<a href=\"Dice\/DiceHand.php.html#84\">App\\Controller\\DiceHand::checkNumber<\/a>"],[0,1,"<a href=\"Dice\/DiceHand.php.html#103\">App\\Controller\\DiceHand::setNrOfDice<\/a>"],[0,1,"<a href=\"Dice\/DiceHand.php.html#108\">App\\Controller\\DiceHand::getNrOfDice<\/a>"],[0,1,"<a href=\"Dice\/GraphicalDice.php.html#33\">App\\Controller\\GraphicalDice::__construct<\/a>"],[0,1,"<a href=\"Dice\/GraphicalDice.php.html#43\">App\\Controller\\GraphicalDice::graphic<\/a>"],[0,1,"<a href=\"Dice\/YatzyGame.php.html#22\">App\\Controller\\YatzyGame::__construct<\/a>"],[0,3,"<a href=\"Dice\/YatzyGame.php.html#27\">App\\Controller\\YatzyGame::whatRound<\/a>"],[0,3,"<a href=\"Dice\/YatzyGame.php.html#37\">App\\Controller\\YatzyGame::whatThrow<\/a>"],[0,2,"<a href=\"Dice\/YatzyGame.php.html#47\">App\\Controller\\YatzyGame::newRoundOrNot<\/a>"],[0,3,"<a href=\"Dice\/YatzyGame.php.html#59\">App\\Controller\\YatzyGame::savedDices<\/a>"],[0,6,"<a href=\"Dice\/YatzyGame.php.html#76\">App\\Controller\\YatzyGame::checkScore<\/a>"],[0,1,"<a href=\"Dice\/YatzyGame.php.html#97\">App\\Controller\\YatzyGame::getSum<\/a>"],[0,9,"<a href=\"Dice\/YatzyGame.php.html#103\">App\\Controller\\YatzyGame::returnMess<\/a>"],[0,1,"<a href=\"Entity\/Book.php.html#40\">App\\Entity\\Book::getId<\/a>"],[0,1,"<a href=\"Entity\/Book.php.html#45\">App\\Entity\\Book::getTitle<\/a>"],[0,1,"<a href=\"Entity\/Book.php.html#50\">App\\Entity\\Book::setTitle<\/a>"],[0,1,"<a href=\"Entity\/Book.php.html#57\">App\\Entity\\Book::getISBN<\/a>"],[0,1,"<a href=\"Entity\/Book.php.html#62\">App\\Entity\\Book::setISBN<\/a>"],[0,1,"<a href=\"Entity\/Book.php.html#69\">App\\Entity\\Book::getAuthor<\/a>"],[0,1,"<a href=\"Entity\/Book.php.html#74\">App\\Entity\\Book::setAuthor<\/a>"],[0,1,"<a href=\"Entity\/Book.php.html#81\">App\\Entity\\Book::getFrontcover<\/a>"],[0,1,"<a href=\"Entity\/Book.php.html#86\">App\\Entity\\Book::setFrontcover<\/a>"],[0,1,"<a href=\"Entity\/Highscore.php.html#35\">App\\Entity\\Highscore::getId<\/a>"],[0,1,"<a href=\"Entity\/Highscore.php.html#40\">App\\Entity\\Highscore::getName<\/a>"],[0,1,"<a href=\"Entity\/Highscore.php.html#45\">App\\Entity\\Highscore::setName<\/a>"],[0,1,"<a href=\"Entity\/Highscore.php.html#52\">App\\Entity\\Highscore::getScore<\/a>"],[0,1,"<a href=\"Entity\/Highscore.php.html#57\">App\\Entity\\Highscore::setScore<\/a>"],[0,1,"<a href=\"Entity\/Highscore.php.html#64\">App\\Entity\\Highscore::getDate<\/a>"],[0,1,"<a href=\"Entity\/Highscore.php.html#69\">App\\Entity\\Highscore::setDate<\/a>"],[0,3,"<a href=\"Kernel.php.html#14\">App\\Kernel::configureContainer<\/a>"],[0,3,"<a href=\"Kernel.php.html#27\">App\\Kernel::configureRoutes<\/a>"],[0,1,"<a href=\"Repository\/BookRepository.php.html#17\">App\\Repository\\BookRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/HighscoreRepository.php.html#17\">App\\Repository\\HighscoreRepository::__construct<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);

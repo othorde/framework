@@ -18,17 +18,17 @@ class Highscore
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $name;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $score;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $date;
 
@@ -42,19 +42,19 @@ class Highscore
         return $this->name;
     }
 
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
 
         return $this;
     }
 
-    public function getScore(): ?int
+    public function getScore(): ?string
     {
         return $this->score;
     }
 
-    public function setScore(int $score): self
+    public function setScore(?string $score): self
     {
         $this->score = $score;
 
@@ -66,7 +66,7 @@ class Highscore
         return $this->date;
     }
 
-    public function setDate(\DateTimeInterface $date): self
+    public function setDate(?\DateTimeInterface $date): self
     {
         $this->date = $date;
 

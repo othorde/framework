@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace App\functions;
 
 use Twig\Loader\FilesystemLoader;
 use Twig\Environment;
